@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+    <title>BlueNova</title>
+  <!-- Particles.js CDN -->
+
+</head>
+<body>
+
+<nav class="glass-nav">
+ <div class="logo-container">
+    <div class="logo-mark">
+      <div class="left-cut"></div>
+      <div class="right-cut"></div>
+    </div>
+    <span class="logo-text">BlueNova</span>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="section">
+  <h2>Mesmerizing Features</h2>
+
+  <div class="grid">
+    <div class="feature-card">
+      <h3>Glassmorphism</h3>
+      <p>Crystal-clear panels with soft neon edges for a premium feel.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Neon Hover Effects</h3>
+      <p>Fully interactive glowing elements that breathe with movement.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Smooth Micro-Animations</h3>
+      <p>Easing, transitions, and fluidity that feel human—never robotic.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Faint Blue Identity</h3>
+      <p>Your signature blue glow woven into every layer of the UI.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 BlueNova. Precision-built dark UI.
+</footer>
+<style>
+  body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #e0e7ff;
+ 
+
+  /* background layers */
+  background: radial-gradient(circle at 30% 30%, #0d1117, #1e293b, #1e3a8a);
+  background-size: 200% 200%;
+  animation: radialMove 20s linear infinite, hueShift 30s linear infinite;
+}
+
+/* slowly move radial gradient for fluid motion */
+@keyframes radialMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* shift hue for dynamic color changes */
+@keyframes hueShift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(90deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+/* BlueNova Features - Plasma Grid Scan Animation - Add to style.css */
+
+/* Initial hidden states */
+.glass-nav { opacity: 0; transform: scale(0.95) translateY(-20px); }
+.hero { opacity: 0; transform: scale(0.92); }
+.hero h2, .hero p, .glow-btn { opacity: 0; transform: translateY(25px) scale(0.95); }
+footer { opacity: 0; transform: translateY(30px); }
+
+/* PLASMA GRID EFFECT - Safe z-index */
+body::before {
+    content: ''; 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    pointer-events: none; 
+    z-index: 1;
+    background: 
+        linear-gradient(45deg, transparent 30%, rgba(0,212,255,0.1) 50%, transparent 70%),
+        linear-gradient(-45deg, transparent 30%, rgba(0,184,255,0.15) 50%, transparent 70%);
+    background-size: 200% 200%;
+    animation: plasmaGridScan 2.2s cubic-bezier(0.23,1,0.32,1) both;
+}
+
+@keyframes plasmaGridScan {
+    0% { 
+        opacity: 0.8; 
+        transform: scaleX(0.1) scaleY(0.05); 
+        filter: blur(12px); 
+    }
+    35% { 
+        transform: scaleX(1.4) scaleY(1.3); 
+        filter: blur(6px); 
+    }
+    65% { 
+        opacity: 0.4; 
+        transform: scaleX(1.05) scaleY(1.02); 
+        filter: blur(0); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: scaleX(1) scaleY(1); 
+    }
+}
+
+/* Plasma pulse animations */
+@keyframes plasmaPulseNav {
+    0% { opacity: 0; transform: scale(0.9) translateY(-30px); filter: blur(6px); }
+    55% { transform: scale(1.03) translateY(3px); box-shadow: 0 0 40px rgba(0,212,255,0.5); }
+    100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+}
+
+@keyframes plasmaWaveHero {
+    0% { opacity: 0; transform: scale(0.88) rotateX(10deg); }
+    50% { transform: scale(1.04) rotateX(-2deg); filter: drop-shadow(0 20px 40px rgba(0,212,255,0.3)); }
+    100% { opacity: 1; transform: scale(1) rotateX(0); }
+}
+
+@keyframes plasmaGridCard {
+    0% { opacity: 0; transform: translateY(35px) scaleX(0.92); }
+    60% { transform: translateY(-8px) scaleX(1.01); }
+    100% { opacity: 1; transform: translateY(0) scaleX(1); }
+}
+
+/* PERFECTLY STAGGERED TIMING */
+.glass-nav {
+    animation: plasmaPulseNav 1s cubic-bezier(0.175,0.885,0.32,1.275) 0.4s both;
+}
+
+.hero {
+    animation: plasmaWaveHero 1.2s cubic-bezier(0.175,0.885,0.32,1.275) 0.9s both;
+}
+
+.hero h2 {
+    animation: plasmaGridCard 0.85s cubic-bezier(0.175,0.885,0.32,1.275) 1.3s both;
+}
+
+.hero p {
+    animation: plasmaGridCard 0.85s cubic-bezier(0.175,0.885,0.32,1.275) 1.55s both;
+}
+
+.glow-btn {
+    animation: plasmaGridCard 0.85s cubic-bezier(0.175,0.885,0.32,1.275) 1.8s both;
+}
+
+footer {
+    animation: plasmaGridCard 0.75s cubic-bezier(0.175,0.885,0.32,1.275) 2.1s both;
+}
+
+/* Logo gets special plasma glow */
+.logo-container {
+    animation: plasmaPulseNav 1.1s cubic-bezier(0.175,0.885,0.32,1.275) 0.6s both;
+}
+</style>
+</body>
+</html>
