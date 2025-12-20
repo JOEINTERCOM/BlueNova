@@ -19,7 +19,7 @@ Modern SaaS analytics dashboard with dark theme and interactive metrics. Built w
 - Netlify (global CDN deployment)
 
 🚀 Quick Start
-1. Clone repo
+1. Clone repo: git clone (https://github.com/JOEINTERCOM/BlueNova)
 2. Open `index.html` in browser
 3. Or visit [live demo](https://bluenovaproject.netlify.app)
 
