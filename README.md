@@ -3,7 +3,7 @@
 Modern SaaS analytics dashboard with dark theme and interactive metrics. Built with HTML, CSS, and JavaScript.
 
 📱 Live Demo
-[![BlueNova Dashboard](https://github.com/JOEINTERCOM/BlueNova/blob/main/Screenshot%202025-12-18%20211044.png?raw=true)](https://bluenovaproject.netlify.app)
+[![BlueNova Dashboard]( https://github.com/JOEINTERCOM/BlueNova/blob/main/Screenshot%202025-12-20%20165955.png?raw=true)](https://bluenovaproject.netlify.app)
 
  ✨ Features
 - Dark gradient theme with glassmorphism cards
