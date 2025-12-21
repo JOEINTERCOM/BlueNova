@@ -16,7 +16,8 @@ Modern SaaS analytics dashboard with dark theme and interactive metrics. Built w
 - HTML5 (semantic structure)
 - CSS3 (Grid/Flexbox, animations)
 - Vanilla JavaScript (dynamic counters)
-- Netlify (global CDN deployment)
+- Github Pages (global CDN deployment)
+- 
 
 🚀 Quick Start
 1. Clone repo: git clone (https://github.com/JOEINTERCOM/BlueNova)
