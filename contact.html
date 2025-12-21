@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iNCIgeT0iNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNCIgZmlsbD0iIzI5NjVmMSIvPgo8cGF0aCBkPSJNMTYgNEwxNiAxNlMxNiAxNiAyNCAxNloiIGZpbGw9IiNmZmYiLz4KPHBhdGggZD0iTTQgMjRMMTYgMjRMMTYgMTZNNiAxNkwxNiAxNkwxNiAyNE04IDI0TDE2IDI0IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4K">
+    <title>BlueNova</title>
+  <!-- Particles.js CDN -->
+
+</head>
+<body>
+<!-- Add these classes to body tag -->
+<body class="aurora-orb1 aurora-orb2">
+<nav class="glass-nav">
+ <div class="logo-container">
+    <div class="logo-mark">
+      <div class="left-cut"></div>
+      <div class="right-cut"></div>
+    </div>
+    <span class="logo-text">BlueNova</span>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="section">
+  <h2>Contact</h2>
+
+  <p style="text-align:center; opacity: 0.7; margin-bottom: 40px;">
+    Reach out for collaborations, commissions, or custom aesthetic builds.
+  </p>
+
+  <div style="max-width: 500px; margin: auto;">
+    <form style="display:flex; flex-direction:column; gap:20px;">
+      <input type="text" placeholder="Your Name" 
+             style="padding:15px; background:rgba(0,20,50,0.3); border:1px solid rgba(120,180,255,0.25); border-radius:10px; color:white;">
+      <input type="email" placeholder="Email"
+             style="padding:15px; background:rgba(0,20,50,0.3); border:1px solid rgba(120,180,255,0.25); border-radius:10px; color:white;">
+      <textarea placeholder="Message"
+             style="padding:15px; height:120px; background:rgba(0,20,50,0.3); border:1px solid rgba(120,180,255,0.25); border-radius:10px; color:white;"></textarea>
+
+      <button class="glow-btn" style="width:180px; margin:auto;">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2025 BlueNova. Let's create something beautiful.
+</footer>
+
+<style>
+
+/* FIXED - Mesmerizing Moving Nebula Background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  color: #e0e7ff;
+  background: #0d1117;
+  position: relative;
+}
+
+/* DYNAMIC MOVING NEBULA LAYERS */
+body::before {
+  content: ''; 
+  position: fixed; 
+  top: 0; left: 0; 
+  width: 200%; height: 200%; /* Oversized for movement */
+  pointer-events: none; 
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(100,200,255,0.2) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 30% at 80% 70%, rgba(200,100,255,0.15) 0%, transparent 50%);
+  background-size: 300% 300%;
+  animation: nebulaFlow 90s linear infinite;
+}
+
+body::after {
+  content: ''; 
+  position: fixed; 
+  inset: 0; 
+  pointer-events: none; 
+  z-index: -1;
+  background-image: 
+    linear-gradient(45deg, transparent 40%, rgba(0,212,255,0.12) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(138,43,226,0.1) 50%, transparent 60%);
+  background-size: 400% 400%; /* Large for smooth movement */
+  animation: cosmicDrift 120s ease-in-out infinite;
+}
+
+/* FLOATING ORBS */
+.aurora-orb1::before,
+.aurora-orb2::before {
+  content: ''; 
+  position: fixed; 
+  border-radius: 50%; 
+  pointer-events: none; 
+  z-index: -1;
+  background: radial-gradient(circle, rgba(0,212,255,0.4) 0%, transparent 70%);
+  filter: blur(30px);
+}
+
+.aurora-orb1::before {
+  width: 150px; height: 150px; 
+  top: 20%; left: 10%; 
+  animation: orbFloat1 100s ease-in-out infinite;
+}
+
+.aurora-orb2::before {
+  width: 200px; height: 200px; 
+  top: 70%; right: 15%; 
+  background: radial-gradient(circle, rgba(200,100,255,0.3) 0%, transparent 70%);
+  animation: orbFloat2 130s ease-in-out infinite reverse;
+}
+
+/* VEIL DESCENT EFFECT */
+.wave-overlay {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image: 
+    repeating-linear-gradient(90deg, transparent 0, rgba(0,212,255,0.03) 2px, transparent 4px),
+    radial-gradient(circle at 10% 20%, rgba(0,212,255,0.08) 0%, transparent 50%);
+  animation: veilDescent 4s cubic-bezier(0.25,0.46,0.45,0.94) both, waveFlow 80s linear infinite;
+}
+
+/* FIXED ANIMATIONS - NOW MOVING! */
+@keyframes nebulaFlow {
+  0% { 
+    background-position: 0% 0%; 
+    transform: scale(1) translate(0, 0); 
+  }
+  25% { 
+    background-position: 100% 50%; 
+    transform: scale(1.03) translate(2%, -1%); 
+  }
+  50% { 
+    background-position: 50% 100%; 
+    transform: scale(1.01) translate(1%, 2%); 
+  }
+  75% { 
+    background-position: 100% 0%; 
+    transform: scale(1.02) translate(-1%, 1%); 
+  }
+  100% { 
+    background-position: 0% 0%; 
+    transform: scale(1) translate(0, 0); 
+  }
+}
+
+@keyframes cosmicDrift {
+  0%, 100% { 
+    background-position: 0% 50%; 
+    opacity: 0.6; 
+    filter: blur(1px); 
+  }
+  33% { 
+    background-position: 100% 0%; 
+    opacity: 0.8; 
+  }
+  66% { 
+    background-position: 0% 100%; 
+    opacity: 0.7; 
+  }
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, -15px) scale(1.1); }
+  66% { transform: translate(-10px, 10px) scale(0.95); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-25px, 20px) scale(1.15); }
+  66% { transform: translate(15px, -10px) scale(0.9); }
+}
+
+@keyframes waveFlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100px); }
+}
+
+/* Fade-in animations remain the same */
+@keyframes auroraFadeNav { 0% { opacity: 0; transform: translateY(-40px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes auroraRiseSection { 0% { opacity: 0; transform: scale(0.95) translateY(10px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+@keyframes auroraSlideUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+
+.glass-nav { animation: auroraFadeNav 0.9s cubic-bezier(0.25,0.46,0.45,0.94) 0.3s both; }
+.section { animation: auroraRiseSection 1s cubic-bezier(0.25,0.46,0.45,0.94) 0.8s both; }
+.section h2 { animation: auroraSlideUp 0.7s cubic-bezier(0.25,0.46,0.45,0.94) 1.2s both; }
+.section p { animation: auroraSlideUp 0.7s cubic-bezier(0.25,0.46,0.45,0.94) 1.4s both; }
+input:nth-child(1) { animation: auroraSlideUp 0.6s cubic-bezier(0.25,0.46,0.45,0.94) 1.6s both; }
+input:nth-child(2) { animation: auroraSlideUp 0.6s cubic-bezier(0.25,0.46,0.45,0.94) 1.8s both; }
+textarea { animation: auroraSlideUp 0.6s cubic-bezier(0.25,0.46,0.45,0.94) 2.0s both; }
+.glow-btn { animation: auroraSlideUp 0.6s cubic-bezier(0.25,0.46,0.45,0.94) 2.2s both; }
+footer { animation: auroraSlideUp 0.7s cubic-bezier(0.25,0.46,0.45,0.94) 2.5s both; }
+</style>
+</body>
+</html>
