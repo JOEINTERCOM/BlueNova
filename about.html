@@ -41,8 +41,8 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;     /* was height: 100vh */
+  overflow-x: hidden;    /* allow vertical scroll if needed */
   color: #e0e7ff;
   background: #0d1117;
   position: relative;
@@ -126,3 +126,4 @@ body::after {
 </body>
 
 </html>
+
