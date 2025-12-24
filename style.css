@@ -331,7 +331,7 @@ footer {
   }
 
   .hero {
-    padding: 120px 18px 70px;
+    padding: 110px 18px 40px;
   }
 
   .hero h2 {
@@ -358,7 +358,7 @@ footer {
 
   footer {
     font-size: 13px;
-    padding: 28px 8px;
+    padding: 20px 10px;
   }
 }
 
@@ -410,3 +410,4 @@ footer {
     font-size: 14px;
   }
 }
+
