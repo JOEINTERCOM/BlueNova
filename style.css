@@ -192,7 +192,8 @@ nav ul li a:hover::after { width: 100%; }
 /* ---------- FOOTER ---------- */
 footer {
   text-align: center;
-  padding: 40px 10px;
+  padding: 2px 2px;
+  margin: 1px 1px;
   opacity: 0.6;
   font-size: 15px;
 }
@@ -410,6 +411,7 @@ footer {
     font-size: 14px;
   }
 }
+
 
 
 
