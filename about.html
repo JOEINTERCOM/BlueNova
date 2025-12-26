@@ -115,11 +115,18 @@ body::after {
   75% { transform: translateX(30px) translateY(-15px) rotate(3deg); }
   100% { transform: translateX(0) translateY(0) rotate(0deg); }
 }
-
+@media (max-width: 480px) {
+html, body{
+  max-width: 100%;
+    max-height: 100%;
+  overflow-x: hidden;
+}
+}
 </style>
 </body>
 
 </html>
+
 
 
 
